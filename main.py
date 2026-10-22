@@ -49,10 +49,7 @@ pygame.font.init()
 
 # ---- Résolution virtuelle (le jeu se dessine toujours en 1000×700)
 # ☢️ RÉSOLUTION DYNAMIQUE
-if 'IS_WEB' in globals() and IS_WEB:
-    WIDTH, HEIGHT = 600, 420  # Plus petit = Plus rapide sur web
-else:
-    WIDTH, HEIGHT = 1000, 700
+WIDTH, HEIGHT = 1000, 700
 FPS = 30 if IS_WEB else 60
 # Sur le web, RESIZABLE provoque un écran noir. On garde SCALED seulement.
 SCREEN_FLAGS = 0 if IS_WEB else getattr(pygame, "SCALED", 0)
